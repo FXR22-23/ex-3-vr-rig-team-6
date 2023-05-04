@@ -754,6 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 121315130}
+  - component: {fileID: 121315132}
   m_Layer: 0
   m_Name: IKHead
   m_TagString: Untagged
@@ -768,14 +769,65 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121315129}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.003611296, y: 0.000000113288465, z: 0.00000012510519, w: 0.99999356}
+  m_LocalPosition: {x: 3.0990002, y: 1.6384506, z: 0.0075671887}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1494961525}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121315132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121315129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8935e03361a14ec4b8edc872f76bc822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 1445104239}
+    m_SourceObjects:
+      m_Length: 1
+      m_Item0:
+        transform: {fileID: 121315130}
+        weight: 1
+      m_Item1:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item2:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item3:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item4:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item5:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item6:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item7:
+        transform: {fileID: 0}
+        weight: 0
+    m_ConstrainedPositionAxes:
+      x: 1
+      y: 1
+      z: 1
+    m_ConstrainedRotationAxes:
+      x: 1
+      y: 1
+      z: 1
+    m_MaintainPositionOffset: 0
+    m_MaintainRotationOffset: 0
 --- !u!1 &126388224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246811350}
   - component: {fileID: 246811351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3267,7 +3319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470018398}
   - component: {fileID: 470018399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5874,7 +5926,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6055,6 +6107,7 @@ GameObject:
   - component: {fileID: 873508921}
   - component: {fileID: 873508926}
   - component: {fileID: 873508925}
+  - component: {fileID: 873508927}
   m_Layer: 0
   m_Name: Avatar-586232825
   m_TagString: Untagged
@@ -6240,6 +6293,36 @@ MonoBehaviour:
   - m_Rig: {fileID: 1494961524}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &873508927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873508920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b10d4caf32f2794c99e0cc28d06a33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head:
+    vrTarget: {fileID: 826052370}
+    ikTarget: {fileID: 121315130}
+    trackingPositionOffset: {x: 0, y: -0.08, z: -0.03}
+    trackingRotationOffset: {x: 0, y: 0, z: 0}
+  leftHand:
+    vrTarget: {fileID: 1551314542}
+    ikTarget: {fileID: 1247154853}
+    trackingPositionOffset: {x: -0.05, y: -0.03, z: -0.12}
+    trackingRotationOffset: {x: 0, y: 90, z: 90}
+  rightHand:
+    vrTarget: {fileID: 326095807}
+    ikTarget: {fileID: 945816352}
+    trackingPositionOffset: {x: -0.05, y: -0.03, z: -0.12}
+    trackingRotationOffset: {x: 0, y: -90, z: -90}
+  turnSmoothness: 0
+  ikHead: {fileID: 121315130}
+  HeadBodyOffset: {x: 0, y: -1.65, z: 0}
 --- !u!1 &878069390
 GameObject:
   m_ObjectHideFlags: 0
@@ -6250,7 +6333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 878069391}
   - component: {fileID: 878069392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11246,7 +11329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1605776829}
   - component: {fileID: 1605776830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12037,7 +12120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818694341}
   - component: {fileID: 1818694342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Teeth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12474,7 +12557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851997228}
   - component: {fileID: 1851997229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12689,7 +12772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876129063}
   - component: {fileID: 1876129064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Facewear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
