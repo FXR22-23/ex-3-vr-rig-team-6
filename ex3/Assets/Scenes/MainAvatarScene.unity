@@ -6109,6 +6109,7 @@ GameObject:
   - component: {fileID: 873508925}
   - component: {fileID: 873508927}
   - component: {fileID: 873508928}
+  - component: {fileID: 873508929}
   m_Layer: 0
   m_Name: Avatar-586232825
   m_TagString: Untagged
@@ -6344,6 +6345,20 @@ MonoBehaviour:
   footOffset: {x: 0, y: 0.5, z: 0}
   raycastOffsetLeft: {x: 0, y: 0.86, z: 0}
   raycastOffsRight: {x: 0, y: 0.86, z: 0}
+--- !u!114 &873508929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873508920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e33e24228673d4380cca833dc7653a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  animator: {fileID: 873508923}
 --- !u!1 &878069390
 GameObject:
   m_ObjectHideFlags: 0
